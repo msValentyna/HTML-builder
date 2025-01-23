@@ -15,7 +15,7 @@ rl.setPrompt('Введите текст. ');
 rl.prompt();
 
 rl.on('line', (answer) => {
-  if (answer.trim() === 'stop') {
+  if (answer.trim() === 'exit') {
     rl.close();
   } else {
     writeStream.write(answer + '\n', (err) => {
